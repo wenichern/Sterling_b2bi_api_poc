@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/events/order-received.v1.schema.json",
+  "title": "OrderReceivedEvent",
+  "description": "Published to Service Bus queue 'orders-in'. Message properties: correlationId, traceparent, partnerId, docType.",
+  "type": "object",
+  "required": ["eventType", "eventTime", "correlationId", "partnerId", "docType", "controlNumber", "poNumber", "order"],
+  "additionalProperties": false,
+  "properties": {
+    "eventType": { "const": "order.received.v1" },
+    "eventTime": { "type": "string", "format": "date-time" },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "partnerId": { "type": "string" },
+    "docType": { "const": "850" },
+    "controlNumber": { "type": "string" },
+    "poNumber": { "type": "string" },
+    "order": { "$ref": "../canonical/order.schema.json" }
+  }
+}

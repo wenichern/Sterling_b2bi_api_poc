@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/canonical/asn.schema.json",
+  "title": "CanonicalAdvanceShipNotice",
+  "description": "Canonical ASN used to generate outbound EDI 856.",
+  "type": "object",
+  "required": ["schemaVersion", "partnerId", "docType", "correlationId", "poNumber", "shipmentId", "shipDate", "lines"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "partnerId": { "type": "string", "minLength": 1 },
+    "docType": { "type": "string", "enum": ["856"] },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "poNumber": { "type": "string" },
+    "shipmentId": { "type": "string" },
+    "shipDate": { "type": "string", "format": "date" },
+    "carrier": { "type": "string" },
+    "trackingNumber": { "type": "string" },
+    "lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["lineNumber", "sku", "quantityShipped", "uom"],
+        "additionalProperties": false,
+        "properties": {
+          "lineNumber": { "type": "integer", "minimum": 1 },
+          "sku": { "type": "string" },
+          "quantityShipped": { "type": "number", "exclusiveMinimum": 0 },
+          "uom": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/manifests/schema/partner.schema.json",
+  "title": "PartnerManifest",
+  "description": "Declarative onboarding manifest. A pipeline turns it into APIM config, Service Bus entities, Sterling partner setup, and dashboards.",
+  "type": "object",
+  "required": ["apiVersion", "kind", "partner", "protocols", "documents", "routing", "observability"],
+  "additionalProperties": false,
+  "properties": {
+    "apiVersion": { "const": "onboarding/v1" },
+    "kind": { "const": "PartnerManifest" },
+    "partner": {
+      "type": "object",
+      "required": ["id", "name", "contactEmail"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Z0-9_-]{2,20}$" },
+        "name": { "type": "string" },
+        "contactEmail": { "type": "string", "format": "email" }
+      }
+    },
+    "protocols": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "enum": ["AS2", "SFTP", "API"] },
+          "as2Id": { "type": "string" },
+          "certificateSecretName": { "type": "string", "description": "Key Vault secret name; never the certificate itself." },
+          "sftpUser": { "type": "string" },
+          "inboundPath": { "type": "string" },
+          "outboundPath": { "type": "string" }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["docType", "direction", "map"],
+        "additionalProperties": false,
+        "properties": {
+          "docType": { "enum": ["850", "855", "856", "810"] },
+          "direction": { "enum": ["inbound", "outbound"] },
+          "map": { "type": "string", "description": "Sterling map name or template id." },
+          "canonicalSchema": { "type": "string" }
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "required": ["queue", "backend"],
+      "additionalProperties": false,
+      "properties": {
+        "queue": { "type": "string" },
+        "backend": { "enum": ["ERP", "WMS", "TMS"] },
+        "pattern": { "enum": ["async-command", "sync-request-reply", "pubsub-event", "file-to-api", "api-to-edi"] }
+      }
+    },
+    "observability": {
+      "type": "object",
+      "required": ["slaMinutes"],
+      "additionalProperties": false,
+      "properties": {
+        "slaMinutes": { "type": "integer", "minimum": 1 },
+        "alertEmail": { "type": "string", "format": "email" }
+      }
+    }
+  }
+}

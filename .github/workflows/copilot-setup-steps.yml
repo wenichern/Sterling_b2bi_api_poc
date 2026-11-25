@@ -1,0 +1,20 @@
+name: Copilot Setup Steps
+on: workflow_dispatch
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: "8.0.x" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install tooling
+        run: |
+          npm install -g @stoplight/spectral-cli @stoplight/prism-cli
+          pip install jsonschema pyyaml
+          az bicep install

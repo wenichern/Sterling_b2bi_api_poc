@@ -1,0 +1,83 @@
+openapi: 3.0.3
+info:
+  title: ERP Orders API (backend)
+  version: 1.0.0
+  description: Backend ERP API that receives canonical orders. Mocked with Prism in the POC.
+  contact: { name: Integration Team }
+servers:
+  - url: https://erp.example.internal
+paths:
+  /orders:
+    post:
+      operationId: createOrder
+      summary: Create an order from a canonical order payload
+      description: Idempotent on partnerId + docType + controlNumber; a duplicate returns 200 with the existing order.
+      tags: [orders]
+      parameters:
+        - $ref: '#/components/parameters/CorrelationId'
+        - $ref: '#/components/parameters/Traceparent'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/CanonicalOrder' }
+      responses:
+        '201':
+          description: Order created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/OrderAck' }
+        '200':
+          description: Duplicate; existing order returned
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/OrderAck' }
+        '400': { $ref: '#/components/responses/Problem' }
+        '503': { $ref: '#/components/responses/Problem' }
+components:
+  parameters:
+    CorrelationId:
+      name: x-correlation-id
+      in: header
+      required: true
+      description: Correlation GUID carried end to end.
+      schema: { type: string, format: uuid }
+    Traceparent:
+      name: traceparent
+      in: header
+      required: false
+      description: W3C trace context.
+      schema: { type: string }
+  responses:
+    Problem:
+      description: Error (RFC 7807)
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+  schemas:
+    CanonicalOrder:
+      type: object
+      description: See contracts/canonical/order.schema.json (authoritative).
+      required: [partnerId, controlNumber, correlationId, poNumber, orderDate, lines]
+      properties:
+        partnerId: { type: string }
+        controlNumber: { type: string }
+        correlationId: { type: string, format: uuid }
+        poNumber: { type: string }
+        orderDate: { type: string, format: date }
+        lines:
+          type: array
+          items: { type: object }
+    OrderAck:
+      type: object
+      required: [orderId, status]
+      properties:
+        orderId: { type: string }
+        status: { type: string, enum: [ACCEPTED, REJECTED] }
+    Problem:
+      type: object
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }

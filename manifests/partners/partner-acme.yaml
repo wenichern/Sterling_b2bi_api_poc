@@ -1,0 +1,26 @@
+apiVersion: onboarding/v1
+kind: PartnerManifest
+partner:
+  id: ACME
+  name: ACME Retail Inc.
+  contactEmail: edi@acme.example.com
+protocols:
+  - type: AS2
+    as2Id: ACME-AS2
+    certificateSecretName: acme-as2-cert
+documents:
+  - docType: "850"
+    direction: inbound
+    map: ACME_850_to_CanonicalOrder
+    canonicalSchema: contracts/canonical/order.schema.json
+  - docType: "856"
+    direction: outbound
+    map: CanonicalASN_to_ACME_856
+    canonicalSchema: contracts/canonical/asn.schema.json
+routing:
+  queue: orders-in
+  backend: ERP
+  pattern: async-command
+observability:
+  slaMinutes: 15
+  alertEmail: ops@example.com

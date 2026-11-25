@@ -1,0 +1,5 @@
+# Replace with your handles/teams
+/contracts/            @your-org/architects
+/manifests/schema/     @your-org/architects
+/.github/              @your-org/architects
+*                      @your-org/reviewers

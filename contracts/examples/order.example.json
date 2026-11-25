@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "partnerId": "ACME",
+  "docType": "850",
+  "controlNumber": "000000101",
+  "correlationId": "7b1f6c52-3a4e-4d3b-9f0a-2c9d8a1e5b77",
+  "poNumber": "PO-10001",
+  "orderDate": "2026-11-25",
+  "requestedDeliveryDate": "2026-12-10",
+  "currency": "USD",
+  "shipTo": { "name": "ACME DC 1", "line1": "100 Main St", "city": "Raleigh", "region": "NC", "postalCode": "27601", "country": "US" },
+  "lines": [
+    { "lineNumber": 1, "sku": "SKU-001", "description": "Widget", "quantity": 100, "uom": "EA", "unitPrice": 2.5 },
+    { "lineNumber": 2, "sku": "SKU-002", "quantity": 20, "uom": "CS" }
+  ]
+}

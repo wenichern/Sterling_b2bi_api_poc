@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: WMS Order Status API (backend)
+  version: 1.0.0
+  description: Backend WMS API that returns order fulfilment status. Mocked in the POC.
+  contact: { name: Integration Team }
+servers:
+  - url: https://wms.example.internal
+paths:
+  /orders/{orderId}/status:
+    get:
+      operationId: getOrderStatus
+      summary: Get fulfilment status of an order
+      tags: [orders]
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema: { type: string }
+        - name: x-correlation-id
+          in: header
+          required: true
+          schema: { type: string, format: uuid }
+        - name: traceparent
+          in: header
+          required: false
+          schema: { type: string }
+      responses:
+        '200':
+          description: Status
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/OrderStatus' }
+        '404':
+          description: Not found
+          content:
+            application/problem+json:
+              schema: { $ref: '#/components/schemas/Problem' }
+components:
+  schemas:
+    OrderStatus:
+      type: object
+      required: [orderId, status, updatedAt]
+      properties:
+        orderId: { type: string }
+        status: { type: string, enum: [RECEIVED, ALLOCATED, PICKED, SHIPPED, DELIVERED, CANCELLED] }
+        updatedAt: { type: string, format: date-time }
+        trackingNumber: { type: string }
+    Problem:
+      type: object
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }

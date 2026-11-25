@@ -1,0 +1,22 @@
+# Second fake partner: used to prove onboarding is manifest-only.
+apiVersion: onboarding/v1
+kind: PartnerManifest
+partner:
+  id: GLOBEX
+  name: Globex Distribution
+  contactEmail: edi@globex.example.com
+protocols:
+  - type: SFTP
+    sftpUser: globex
+    inboundPath: /in
+    outboundPath: /out
+documents:
+  - docType: "850"
+    direction: inbound
+    map: GLOBEX_850_to_CanonicalOrder
+routing:
+  queue: orders-in
+  backend: ERP
+  pattern: file-to-api
+observability:
+  slaMinutes: 30

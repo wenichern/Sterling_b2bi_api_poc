@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "partnerId": "ACME",
+  "docType": "856",
+  "correlationId": "7b1f6c52-3a4e-4d3b-9f0a-2c9d8a1e5b77",
+  "poNumber": "PO-10001",
+  "shipmentId": "SHP-5001",
+  "shipDate": "2026-12-01",
+  "carrier": "UPS",
+  "trackingNumber": "1Z999AA10123456784",
+  "lines": [ { "lineNumber": 1, "sku": "SKU-001", "quantityShipped": 100, "uom": "EA" } ]
+}

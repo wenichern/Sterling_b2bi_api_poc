@@ -1,0 +1,25 @@
+# Starter OpenTelemetry Collector config (contrib distribution).
+# Replace exporters for your environment; no secrets here (use env vars).
+receivers:
+  otlp:
+    protocols:
+      grpc: { endpoint: 0.0.0.0:4317 }
+      http: { endpoint: 0.0.0.0:4318 }
+  # Sterling logs (enable when sandbox exists)
+  # filelog:
+  #   include: [/opt/sterling/logs/*.log]
+processors:
+  memory_limiter: { check_interval: 1s, limit_percentage: 75, spike_limit_percentage: 20 }
+  batch: {}
+  attributes/business:
+    actions:
+      - { key: deployment.environment, value: poc, action: upsert }
+exporters:
+  debug: { verbosity: basic }
+  azuremonitor:
+    connection_string: ${env:APPLICATIONINSIGHTS_CONNECTION_STRING}
+service:
+  pipelines:
+    traces:  { receivers: [otlp], processors: [memory_limiter, attributes/business, batch], exporters: [azuremonitor, debug] }
+    metrics: { receivers: [otlp], processors: [memory_limiter, batch], exporters: [azuremonitor] }
+    logs:    { receivers: [otlp], processors: [memory_limiter, batch], exporters: [azuremonitor] }
