@@ -1,0 +1,25 @@
+partner: GLOBEX
+requiredAttributes:
+- partner.id
+- doc.type
+- po.number
+- correlation.id
+alerts:
+- name: GLOBEX-sla-breach
+  severity: 2
+  notify: ops@example.com
+  condition: business event 'sent' not seen within 30 minutes of 'received' for the same correlationId
+- name: GLOBEX-dlq-not-empty
+  severity: 2
+  notify: ops@example.com
+  condition: dead-letter message count > 0 for 5 minutes on any queue for this partner
+- name: GLOBEX-failed-events
+  severity: 3
+  notify: ops@example.com
+  condition: business event 'failed' count > 0 in 15 minutes
+dashboardTiles:
+- Documents received vs sent (by docType)
+- Received -> sent latency vs 30 min SLA
+- Failed events by errorCode
+- Dead-letter depth by queue
+- Recent traces for this partner

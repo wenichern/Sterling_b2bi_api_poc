@@ -1,0 +1,15 @@
+{
+  "partnerId": "GLOBEX",
+  "namedValues": [
+    {
+      "name": "erp-base-url",
+      "secret": false,
+      "note": "Backend base URL per environment (set via parameters, not committed)"
+    },
+    {
+      "name": "globex-sftp-credential",
+      "secret": true,
+      "keyVaultSecretName": "globex-sftp-credential"
+    }
+  ]
+}

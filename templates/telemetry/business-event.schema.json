@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/templates/telemetry/business-event.schema.json",
+  "title": "BusinessEvent",
+  "description": "Emitted by Sterling business processes (HTTP callback or message) so operations can see business-level flow, not just JVM health.",
+  "type": "object",
+  "required": ["eventName", "eventTime", "correlationId", "partnerId", "docType", "bpName"],
+  "additionalProperties": false,
+  "properties": {
+    "eventName": { "enum": ["received", "translated", "sent", "failed"] },
+    "eventTime": { "type": "string", "format": "date-time" },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "traceparent": { "type": "string" },
+    "partnerId": { "type": "string" },
+    "docType": { "type": "string" },
+    "controlNumber": { "type": "string" },
+    "poNumber": { "type": "string" },
+    "batchId": { "type": "string" },
+    "bpName": { "type": "string" },
+    "durationMs": { "type": "integer", "minimum": 0 },
+    "errorCode": { "type": "string" },
+    "errorSummary": { "type": "string", "description": "Short, no payload content or PII." }
+  }
+}

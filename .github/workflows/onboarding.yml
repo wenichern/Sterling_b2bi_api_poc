@@ -1,0 +1,39 @@
+name: Onboarding accelerator
+on:
+  pull_request:
+    paths:
+      - "manifests/**"
+      - "scripts/onboard_partner.py"
+      - "templates/**"
+      - "docs/cases/**"
+permissions:
+  contents: read
+jobs:
+  onboarding:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install jsonschema pyyaml
+      - name: Validate every partner manifest
+        run: python scripts/onboard_partner.py manifests/partners/*.yaml --check
+      - name: Generated example must match the generator
+        run: |
+          python scripts/onboard_partner.py manifests/partners/*.yaml --out docs/cases/generated-example
+          if [ -n "$(git status --porcelain docs/cases/generated-example)" ]; then
+            echo "docs/cases/generated-example is out of date. Regenerate and commit."
+            git status --porcelain docs/cases/generated-example
+            exit 1
+          fi
+      - name: Validate business-event example against its schema
+        run: |
+          python - <<'PY'
+          import json
+          from jsonschema import Draft202012Validator, FormatChecker
+          s = json.load(open("templates/telemetry/business-event.schema.json"))
+          e = json.load(open("templates/telemetry/business-event.example.json"))
+          errs = list(Draft202012Validator(s, format_checker=FormatChecker()).iter_errors(e))
+          assert not errs, errs
+          print("business event example OK")
+          PY

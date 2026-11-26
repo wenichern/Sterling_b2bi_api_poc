@@ -1,0 +1,11 @@
+{
+  "eventName": "translated",
+  "eventTime": "2026-11-25T14:03:11Z",
+  "correlationId": "7b1f6c52-3a4e-4d3b-9f0a-2c9d8a1e5b77",
+  "partnerId": "ACME",
+  "docType": "850",
+  "controlNumber": "000000101",
+  "poNumber": "PO-10001",
+  "bpName": "Inbound_850_ACME",
+  "durationMs": 182
+}

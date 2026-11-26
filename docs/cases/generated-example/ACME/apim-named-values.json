@@ -1,0 +1,15 @@
+{
+  "partnerId": "ACME",
+  "namedValues": [
+    {
+      "name": "erp-base-url",
+      "secret": false,
+      "note": "Backend base URL per environment (set via parameters, not committed)"
+    },
+    {
+      "name": "acme-as2-cert",
+      "secret": true,
+      "keyVaultSecretName": "acme-as2-cert"
+    }
+  ]
+}
