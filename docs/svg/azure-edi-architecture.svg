@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 880" width="1400" height="880">
+<svg xmlns="http://w3.org" viewBox="0 0 1400 880" width="1400" height="880">
   <defs>
     <!-- Drop Shadow -->
     <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
@@ -112,4 +112,44 @@
   <!-- ==================== ZONE 2: EDGE INGESTION ==================== -->
   <!-- Azure API Management -->
   <g transform="translate(240, 140)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure API Management (APIM)</text>
+    <text x="14" y="48" class="font-sans card-sub">Gateway &amp; Rate-Limiting Layer</text>
+    <text x="14" y="67" class="font-sans card-body">• rate-limit-by-key policy (HTTP 429)</text>
+    <text x="14" y="85" class="font-sans card-body">• send-service-bus-message policy</text>
+    <text x="14" y="103" class="font-sans card-body">• Immediate HTTP 202 Accepted response</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: Amazon API Gateway</text>
+  </g>
 
+  <!-- Logic Apps Standard (AS2) -->
+  <g transform="translate(240, 315)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure Logic Apps Standard (AS2)</text>
+    <text x="14" y="48" class="font-sans card-sub">Lightweight Protocol Edge Workflow</text>
+    <text x="14" y="67" class="font-sans card-body">• Native AS2 Decode (decrypt &amp; verify)</text>
+    <text x="14" y="85" class="font-sans card-body">• Returns MDN receipt immediately</text>
+    <text x="14" y="103" class="font-sans card-body">• Enqueues raw payload (no heavy parse)</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: AWS Step Functions / B2Bi</text>
+  </g>
+
+  <!-- Azure Blob Storage + Event Grid -->
+  <g transform="translate(240, 480)" filter="url(#shadow)">
+    <rect width="290" height="235" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Blob Storage (SFTP) + Event Grid</text>
+    <text x="14" y="48" class="font-sans card-sub">Claim-Check Pattern for Large Files</text>
+    <text x="14" y="67" class="font-sans card-body">• Managed SFTP endpoint on Blob Storage</text>
+    <text x="14" y="85" class="font-sans card-body">• Captures BlobCreated reactive events</text>
+    <text x="14" y="103" class="font-sans card-body">• Sends lightweight Blob URL pointer only</text>
+    <text x="14" y="121" class="font-sans card-body">  (avoids Service Bus payload quota spikes)</text>
+    
+    <!-- Inner Event Grid Box -->
+    <rect x="14" y="134" width="262" height="58" rx="6" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2"/>
+    <text x="24" y="152" class="font-sans card-title" style="font-size:12.5px;">Azure Event Grid</text>
+    <text x="24" y="168" class="font-sans card-body">• Pub/sub reactive event router</text>
