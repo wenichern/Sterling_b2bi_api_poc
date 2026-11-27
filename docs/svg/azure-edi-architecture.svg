@@ -154,4 +154,61 @@
     <text x="24" y="152" class="font-sans card-title" style="font-size:12.5px;">Azure Event Grid</text>
     <text x="24" y="168" class="font-sans card-body">• Pub/sub reactive event router</text>
   </g>
+    <!-- ==================== ZONE 3: SHOCK ABSORBER ==================== -->
+  <!-- Service Bus Queues -->
+  <g transform="translate(580, 240)" filter="url(#shadow)">
+    <rect width="210" height="150" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="210" height="30" rx="8" fill="#7c3aed"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Service Bus Queues</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#6d28d9;">Ingestion Buffer</text>
+    <text x="14" y="67" class="font-sans card-body">• Buffers burst traffic</text>
+    <text x="14" y="85" class="font-sans card-body">• Peek-lock reliability</text>
+    <text x="14" y="103" class="font-sans card-body">• Dead-lettering for bad data</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="120" width="182" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="133" class="font-sans aws-badge-text">AWS Equiv: Amazon SQS</text>
+  </g>
+
+  <!-- ==================== ZONE 4: EDI ENGINE & FAN-OUT ==================== -->
+  <!-- Logic Apps (EDI Engine) -->
+  <g transform="translate(845, 140)" filter="url(#shadow)">
+    <rect width="300" height="135" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Logic Apps (EDI Engine)</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">X12 / EDIFACT Translation</text>
+    <text x="14" y="67" class="font-sans card-body">• Integration Account (Schemas/Maps)</text>
+    <text x="14" y="85" class="font-sans card-body">• Validates &amp; Translates EDI to JSON</text>
+    <text x="14" y="103" class="font-sans card-body">• Generates Outbound Acknowledgements</text>
+  </g>
+
+  <!-- Azure Functions -->
+  <g transform="translate(845, 295)" filter="url(#shadow)">
+    <rect width="300" height="115" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure Functions</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">Custom Processing &amp; Debatching</text>
+    <text x="14" y="67" class="font-sans card-body">• Splits large batches into single records</text>
+    <text x="14" y="85" class="font-sans card-body">• Data enrichment &amp; Liquid templating</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="100" width="272" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="113" class="font-sans aws-badge-text">AWS Equiv: AWS Lambda</text>
+  </g>
+
+  <!-- Service Bus Topics (Fan-Out) -->
+  <g transform="translate(845, 430)" filter="url(#shadow)">
+    <rect width="300" height="135" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Service Bus Topics</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">Pub / Sub Routing</text>
+    <text x="14" y="67" class="font-sans card-body">• Publishes clean, translated JSON</text>
+    <text x="14" y="85" class="font-sans card-body">• SQL Filters route data to specific subs</text>
+    <text x="14" y="103" class="font-sans card-body">• Decouples engine from downstream APIs</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="120" width="272" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="133" class="font-sans aws-badge-text">AWS Equiv: Amazon SNS</text>
+  </g>
+
 </svg>
