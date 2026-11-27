@@ -1,0 +1,13 @@
+{
+  "isa": { "senderQualifier": "ZZ", "senderId": "ACMERETAIL", "receiverQualifier": "ZZ", "receiverId": "OURCOMPANY", "controlNumber": "000000301", "usageIndicator": "T" },
+  "gs": { "functionalId": "RA", "senderCode": "ACMERETAIL", "receiverCode": "OURCOMPANY", "controlNumber": "301", "version": "004010" },
+  "st": { "transactionSet": "820", "controlNumber": "0001" },
+  "body": {
+    "payment": { "amount": 300, "paymentDate": "20261215", "methodCode": "ACH", "currencyCode": "USD" },
+    "trace": { "referenceNumber": "TRN-778899" },
+    "remittances": [
+      { "invoiceNumber": "INV-9001", "amountPaid": 250, "amountInvoiced": 250 },
+      { "invoiceNumber": "INV-9002", "amountPaid": 50, "amountInvoiced": 50 }
+    ]
+  }
+}

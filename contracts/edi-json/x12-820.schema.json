@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/edi-json/x12-820.schema.json",
+  "title": "X12Transaction820",
+  "description": "Translated X12 820 payment order / remittance advice as JSON.",
+  "type": "object",
+  "required": ["isa", "gs", "st", "body"],
+  "additionalProperties": false,
+  "properties": {
+    "isa": { "$ref": "x12-common.schema.json#/$defs/isa" },
+    "gs": { "$ref": "x12-common.schema.json#/$defs/gs" },
+    "st": { "$ref": "x12-common.schema.json#/$defs/st" },
+    "body": {
+      "type": "object",
+      "required": ["payment", "trace", "remittances"],
+      "additionalProperties": false,
+      "properties": {
+        "payment": {
+          "type": "object",
+          "required": ["amount", "paymentDate", "methodCode"],
+          "additionalProperties": false,
+          "properties": {
+            "amount": { "type": "number", "minimum": 0 },
+            "paymentDate": { "$ref": "x12-common.schema.json#/$defs/date" },
+            "methodCode": { "type": "string", "description": "BPR04, e.g. ACH, CHK, FWT." },
+            "currencyCode": { "type": "string", "pattern": "^[A-Z]{3}$" }
+          }
+        },
+        "trace": {
+          "type": "object",
+          "required": ["referenceNumber"],
+          "additionalProperties": false,
+          "properties": { "referenceNumber": { "type": "string" } }
+        },
+        "parties": { "type": "array", "items": { "$ref": "x12-common.schema.json#/$defs/party" } },
+        "remittances": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["invoiceNumber", "amountPaid"],
+            "additionalProperties": false,
+            "properties": {
+              "invoiceNumber": { "type": "string" },
+              "amountPaid": { "type": "number" },
+              "amountInvoiced": { "type": "number" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

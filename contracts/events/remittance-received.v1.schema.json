@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/events/remittance-received.v1.schema.json",
+  "title": "RemittanceReceivedEvent",
+  "description": "Published to Service Bus queue 'remittances-in'. Message properties: correlationId, traceparent, partnerId, docType.",
+  "type": "object",
+  "required": ["eventType", "eventTime", "correlationId", "partnerId", "docType", "controlNumber", "remittanceId", "remittance"],
+  "additionalProperties": false,
+  "properties": {
+    "eventType": { "const": "remittance.received.v1" },
+    "eventTime": { "type": "string", "format": "date-time" },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "partnerId": { "type": "string" },
+    "docType": { "const": "820" },
+    "controlNumber": { "type": "string" },
+    "remittanceId": { "type": "string" },
+    "remittance": { "$ref": "../canonical/remittance.schema.json" }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/canonical/remittance.schema.json",
+  "title": "CanonicalRemittance",
+  "description": "Canonical remittance advice produced from EDI 820.",
+  "type": "object",
+  "required": ["schemaVersion", "partnerId", "docType", "controlNumber", "correlationId", "remittanceId", "paymentDate", "paymentMethod", "currency", "totalAmount", "payments"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "partnerId": { "type": "string", "minLength": 1 },
+    "docType": { "type": "string", "enum": ["820"] },
+    "controlNumber": { "type": "string", "description": "Composite ISA-GS-ST control number." },
+    "correlationId": { "type": "string", "format": "uuid" },
+    "remittanceId": { "type": "string", "description": "Payment trace/reference number (TRN02)." },
+    "paymentDate": { "type": "string", "format": "date" },
+    "paymentMethod": { "type": "string", "enum": ["ACH", "CHECK", "WIRE", "OTHER"] },
+    "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "totalAmount": { "type": "number", "minimum": 0 },
+    "payments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["invoiceNumber", "amountPaid"],
+        "additionalProperties": false,
+        "properties": {
+          "invoiceNumber": { "type": "string" },
+          "amountPaid": { "type": "number" },
+          "amountInvoiced": { "type": "number" }
+        }
+      }
+    }
+  }
+}

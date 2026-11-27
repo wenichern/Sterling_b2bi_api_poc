@@ -1,0 +1,11 @@
+{
+  "isa": { "senderQualifier": "ZZ", "senderId": "OURCOMPANY", "receiverQualifier": "ZZ", "receiverId": "ACMERETAIL", "controlNumber": "000000401", "usageIndicator": "T" },
+  "gs": { "functionalId": "IN", "senderCode": "OURCOMPANY", "receiverCode": "ACMERETAIL", "controlNumber": "401", "version": "004010" },
+  "st": { "transactionSet": "810", "controlNumber": "0001" },
+  "body": {
+    "header": { "invoiceDate": "20261202", "invoiceNumber": "INV-9001", "poNumber": "PO-10001" },
+    "cur": { "currencyCode": "USD" },
+    "items": [ { "assignedId": "1", "quantityInvoiced": 100, "uom": "EA", "unitPrice": 2.5, "description": "Widget", "products": [ { "qualifier": "VP", "id": "SKU-001" } ] } ],
+    "total": { "amount": 250 }
+  }
+}

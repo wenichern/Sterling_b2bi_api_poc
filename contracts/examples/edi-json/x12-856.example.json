@@ -1,0 +1,12 @@
+{
+  "isa": { "senderQualifier": "ZZ", "senderId": "OURCOMPANY", "receiverQualifier": "ZZ", "receiverId": "ACMERETAIL", "controlNumber": "000000201", "usageIndicator": "T" },
+  "gs": { "functionalId": "SH", "senderCode": "OURCOMPANY", "receiverCode": "ACMERETAIL", "controlNumber": "201", "version": "004010" },
+  "st": { "transactionSet": "856", "controlNumber": "0001" },
+  "body": {
+    "bsn": { "purposeCode": "00", "shipmentId": "SHP-5001", "date": "20261201" },
+    "carrier": { "name": "UPS" },
+    "references": [ { "qualifier": "CN", "value": "1Z999AA10123456784" } ],
+    "poNumber": "PO-10001",
+    "items": [ { "lineNumber": 1, "quantityShipped": 100, "uom": "EA", "products": [ { "qualifier": "VP", "id": "SKU-001" } ] } ]
+  }
+}

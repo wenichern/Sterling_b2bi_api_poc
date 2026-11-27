@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "partnerId": "ACME",
+  "docType": "810",
+  "correlationId": "7b1f6c52-3a4e-4d3b-9f0a-2c9d8a1e5b77",
+  "invoiceNumber": "INV-9001",
+  "invoiceDate": "2026-12-02",
+  "poNumber": "PO-10001",
+  "currency": "USD",
+  "lines": [
+    { "lineNumber": 1, "sku": "SKU-001", "description": "Widget", "quantity": 100, "uom": "EA", "unitPrice": 2.5 }
+  ],
+  "totalAmount": 250
+}

@@ -1,0 +1,12 @@
+{
+  "partnerId": "ACME",
+  "name": "ACME Retail Inc.",
+  "isa": { "ourQualifier": "ZZ", "ourId": "OURCOMPANY", "partnerQualifier": "ZZ", "partnerId": "ACMERETAIL" },
+  "gs": { "ourCode": "OURCOMPANY", "partnerCode": "ACMERETAIL", "version": "004010" },
+  "overlay": {
+    "skuQualifierOrder": ["VP", "SK"],
+    "uomMap": { "CA": "CS" },
+    "defaultCurrency": "USD",
+    "defaultCountry": "US"
+  }
+}

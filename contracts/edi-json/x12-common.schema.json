@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/edi-json/x12-common.schema.json",
+  "title": "X12Common",
+  "description": "Shared building blocks for the X12 JSON contract between Sterling (parse/serialize) and the edi-bridge adapters.",
+  "$defs": {
+    "isa": {
+      "type": "object",
+      "required": ["senderQualifier", "senderId", "receiverQualifier", "receiverId", "controlNumber"],
+      "additionalProperties": false,
+      "properties": {
+        "senderQualifier": { "type": "string" },
+        "senderId": { "type": "string" },
+        "receiverQualifier": { "type": "string" },
+        "receiverId": { "type": "string" },
+        "controlNumber": { "type": "string", "pattern": "^[0-9]{1,9}$" },
+        "usageIndicator": { "enum": ["P", "T", "I"] }
+      }
+    },
+    "gs": {
+      "type": "object",
+      "required": ["functionalId", "senderCode", "receiverCode", "controlNumber", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "functionalId": { "type": "string" },
+        "senderCode": { "type": "string" },
+        "receiverCode": { "type": "string" },
+        "controlNumber": { "type": "string", "pattern": "^[0-9]{1,9}$" },
+        "version": { "type": "string" }
+      }
+    },
+    "st": {
+      "type": "object",
+      "required": ["transactionSet", "controlNumber"],
+      "additionalProperties": false,
+      "properties": {
+        "transactionSet": { "type": "string" },
+        "controlNumber": { "type": "string", "pattern": "^[0-9]{4,9}$" }
+      }
+    },
+    "party": {
+      "type": "object",
+      "required": ["entityCode", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "entityCode": { "type": "string", "description": "N101, e.g. ST ship-to, BT bill-to, SF ship-from." },
+        "name": { "type": "string" },
+        "idQualifier": { "type": "string" },
+        "id": { "type": "string" },
+        "line1": { "type": "string" },
+        "line2": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "country": { "type": "string" }
+      }
+    },
+    "product": {
+      "type": "object",
+      "required": ["qualifier", "id"],
+      "additionalProperties": false,
+      "properties": {
+        "qualifier": { "type": "string", "description": "Product ID qualifier, e.g. SK (supplier SKU), VP (vendor part), UP (UPC)." },
+        "id": { "type": "string" }
+      }
+    },
+    "date": { "type": "string", "pattern": "^[0-9]{8}$", "description": "CCYYMMDD" }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/edi-json/x12-850.schema.json",
+  "title": "X12Transaction850",
+  "description": "Translated X12 850 purchase order as JSON. Produced by Sterling's parse step; consumed by the 850 inbound adapter.",
+  "type": "object",
+  "required": ["isa", "gs", "st", "body"],
+  "additionalProperties": false,
+  "properties": {
+    "isa": { "$ref": "x12-common.schema.json#/$defs/isa" },
+    "gs": { "$ref": "x12-common.schema.json#/$defs/gs" },
+    "st": { "$ref": "x12-common.schema.json#/$defs/st" },
+    "body": {
+      "type": "object",
+      "required": ["beg", "po1"],
+      "additionalProperties": false,
+      "properties": {
+        "beg": {
+          "type": "object",
+          "required": ["purposeCode", "poNumber", "date"],
+          "additionalProperties": false,
+          "properties": {
+            "purposeCode": { "enum": ["00", "05"] },
+            "poTypeCode": { "type": "string" },
+            "poNumber": { "type": "string", "minLength": 1, "maxLength": 22 },
+            "date": { "$ref": "x12-common.schema.json#/$defs/date" }
+          }
+        },
+        "cur": {
+          "type": "object",
+          "required": ["currencyCode"],
+          "additionalProperties": false,
+          "properties": { "currencyCode": { "type": "string", "pattern": "^[A-Z]{3}$" } }
+        },
+        "dtm": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["qualifier", "date"],
+            "additionalProperties": false,
+            "properties": {
+              "qualifier": { "type": "string", "description": "DTM01, e.g. 002 delivery requested." },
+              "date": { "$ref": "x12-common.schema.json#/$defs/date" }
+            }
+          }
+        },
+        "parties": { "type": "array", "items": { "$ref": "x12-common.schema.json#/$defs/party" } },
+        "po1": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["assignedId", "quantity", "uom", "products"],
+            "additionalProperties": false,
+            "properties": {
+              "assignedId": { "type": "string" },
+              "quantity": { "type": "number", "exclusiveMinimum": 0 },
+              "uom": { "type": "string" },
+              "unitPrice": { "type": "number", "minimum": 0 },
+              "description": { "type": "string" },
+              "products": { "type": "array", "minItems": 1, "items": { "$ref": "x12-common.schema.json#/$defs/product" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

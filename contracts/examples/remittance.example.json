@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "partnerId": "ACME",
+  "docType": "820",
+  "controlNumber": "000000301-301-0001",
+  "correlationId": "0d6c3b7e-5a21-4a8e-9a0d-5f2b6c1d9e11",
+  "remittanceId": "TRN-778899",
+  "paymentDate": "2026-12-15",
+  "paymentMethod": "ACH",
+  "currency": "USD",
+  "totalAmount": 300,
+  "payments": [
+    { "invoiceNumber": "INV-9001", "amountPaid": 250, "amountInvoiced": 250 },
+    { "invoiceNumber": "INV-9002", "amountPaid": 50, "amountInvoiced": 50 }
+  ]
+}

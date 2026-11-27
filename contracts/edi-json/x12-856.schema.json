@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/contracts/edi-json/x12-856.schema.json",
+  "title": "X12Transaction856",
+  "description": "X12 856 ship notice as JSON. Produced by the 856 outbound adapter; Sterling serializes it to EDI (including HL hierarchy numbering).",
+  "type": "object",
+  "required": ["isa", "gs", "st", "body"],
+  "additionalProperties": false,
+  "properties": {
+    "isa": { "$ref": "x12-common.schema.json#/$defs/isa" },
+    "gs": { "$ref": "x12-common.schema.json#/$defs/gs" },
+    "st": { "$ref": "x12-common.schema.json#/$defs/st" },
+    "body": {
+      "type": "object",
+      "required": ["bsn", "poNumber", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "bsn": {
+          "type": "object",
+          "required": ["purposeCode", "shipmentId", "date"],
+          "additionalProperties": false,
+          "properties": {
+            "purposeCode": { "const": "00" },
+            "shipmentId": { "type": "string" },
+            "date": { "$ref": "x12-common.schema.json#/$defs/date" }
+          }
+        },
+        "carrier": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": { "name": { "type": "string" }, "scac": { "type": "string" } }
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["qualifier", "value"],
+            "additionalProperties": false,
+            "properties": { "qualifier": { "type": "string", "description": "REF01, e.g. CN carrier PRO/tracking." }, "value": { "type": "string" } }
+          }
+        },
+        "poNumber": { "type": "string" },
+        "parties": { "type": "array", "items": { "$ref": "x12-common.schema.json#/$defs/party" } },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["lineNumber", "products", "quantityShipped", "uom"],
+            "additionalProperties": false,
+            "properties": {
+              "lineNumber": { "type": "integer", "minimum": 1 },
+              "quantityShipped": { "type": "number", "exclusiveMinimum": 0 },
+              "uom": { "type": "string" },
+              "products": { "type": "array", "minItems": 1, "items": { "$ref": "x12-common.schema.json#/$defs/product" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

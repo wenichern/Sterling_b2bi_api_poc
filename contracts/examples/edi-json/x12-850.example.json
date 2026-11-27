@@ -1,0 +1,17 @@
+{
+  "isa": { "senderQualifier": "ZZ", "senderId": "ACMERETAIL", "receiverQualifier": "ZZ", "receiverId": "OURCOMPANY", "controlNumber": "000000101", "usageIndicator": "T" },
+  "gs": { "functionalId": "PO", "senderCode": "ACMERETAIL", "receiverCode": "OURCOMPANY", "controlNumber": "101", "version": "004010" },
+  "st": { "transactionSet": "850", "controlNumber": "0001" },
+  "body": {
+    "beg": { "purposeCode": "00", "poTypeCode": "SA", "poNumber": "PO-10001", "date": "20261125" },
+    "cur": { "currencyCode": "USD" },
+    "dtm": [ { "qualifier": "002", "date": "20261210" } ],
+    "parties": [
+      { "entityCode": "ST", "name": "ACME DC 1", "line1": "100 Main St", "city": "Raleigh", "state": "NC", "postalCode": "27601", "country": "US" }
+    ],
+    "po1": [
+      { "assignedId": "1", "quantity": 100, "uom": "EA", "unitPrice": 2.5, "description": "Widget", "products": [ { "qualifier": "VP", "id": "SKU-001" } ] },
+      { "assignedId": "2", "quantity": 20, "uom": "CA", "products": [ { "qualifier": "SK", "id": "SKU-002" } ] }
+    ]
+  }
+}
