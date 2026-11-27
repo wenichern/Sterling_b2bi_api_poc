@@ -1,0 +1,155 @@
+<svg xmlns="http://w3.org" viewBox="0 0 1400 880" width="1400" height="880">
+  <defs>
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e2e8f0" stroke-width="0.75"/>
+    </pattern>
+
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-size: 13px; fill: #475569; }
+      .zone-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #64748b; }
+      .card-title { font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .card-sub { font-size: 11.5px; font-weight: 600; fill: #0284c7; }
+      .card-body { font-size: 11.5px; fill: #334155; }
+      .aws-badge-text { font-size: 10.5px; font-weight: 700; fill: #9a3412; }
+      .flow-label { font-size: 11px; font-weight: 600; fill: #334155; }
+      .legend-title { font-size: 12px; font-weight: 700; fill: #0f172a; }
+      .legend-text { font-size: 11.5px; fill: #334155; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1400" height="880" fill="#f8fafc"/>
+  <rect width="1400" height="880" fill="url(#grid)"/>
+
+  <!-- Header -->
+  <rect x="24" y="18" width="1352" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
+  <text x="44" y="46" class="font-sans title">End-to-End Azure EDI Architecture (Burst-Resilient + AWS Service Mapping)</text>
+  <text x="44" y="67" class="font-sans subtitle">Decoupled multi-protocol ingestion (REST, AS2, SFTP) • Service Bus Premium shock absorber • Native X12/EDIFACT translation &amp; pub/sub fan-out</text>
+
+  <!-- AWS Legend Pill in Header -->
+  <rect x="1085" y="32" width="270" height="36" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"/>
+  <rect x="1095" y="40" width="42" height="20" rx="4" fill="#ffedd5" stroke="#f97316" stroke-width="1"/>
+  <text x="1103" y="54" class="font-sans aws-badge-text">AWS</text>
+  <text x="1146" y="54" class="font-sans legend-text">Orange badges = Direct AWS Equivalent</text>
+
+  <!-- ==================== SWIMLANE ZONES ==================== -->
+  <!-- Zone 1: Trading Partners -->
+  <rect x="24" y="96" width="185" height="640" rx="10" fill="#ffffff" fill-opacity="0.7" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="116" y="118" text-anchor="middle" class="font-sans zone-label">1. Trading Partners</text>
+
+  <!-- Zone 2: Edge Ingestion -->
+  <rect x="225" y="96" width="320" height="640" rx="10" fill="#f0f9ff" fill-opacity="0.6" stroke="#bae6fd"/>
+  <text x="385" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#0369a1;">2. Edge Ingestion (Fast Accept)</text>
+
+  <!-- Zone 3: Shock Absorber -->
+  <rect x="561" y="96" width="250" height="640" rx="10" fill="#f5f3ff" fill-opacity="0.65" stroke="#ddd6fe"/>
+  <text x="686" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#6d28d9;">3. Shock Absorber</text>
+
+  <!-- Zone 4: EDI Parsing & Fan-Out -->
+  <rect x="827" y="96" width="340" height="640" rx="10" fill="#ecfdf5" fill-opacity="0.65" stroke="#a7f3d0"/>
+  <text x="997" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#047857;">4. EDI Engine &amp; Fan-Out</text>
+
+  <!-- Zone 5: Downstream Systems -->
+  <rect x="1183" y="96" width="193" height="640" rx="10" fill="#ffffff" fill-opacity="0.7" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="1279" y="118" text-anchor="middle" class="font-sans zone-label">5. Downstream</text>
+
+  <!-- ==================== ZONE 1: PARTNERS ==================== -->
+  <!-- REST Partner -->
+  <g transform="translate(38, 155)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">REST / HTTP Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• JSON / XML / Raw EDI</text>
+    <text x="12" y="66" class="font-sans card-body">• High-frequency bursts</text>
+    <text x="12" y="84" class="font-sans card-body">• Expects HTTP 202</text>
+  </g>
+
+  <!-- AS2 Partner -->
+  <g transform="translate(38, 330)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">AS2 Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• Signed/Encrypted EDI</text>
+    <text x="12" y="66" class="font-sans card-body">• Sync/Async MDN</text>
+    <text x="12" y="84" class="font-sans card-body">• Retail / Logistics EDI</text>
+  </g>
+
+  <!-- SFTP Partner -->
+  <g transform="translate(38, 505)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">SFTP / Batch Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• Large batch X12/EDIFACT</text>
+    <text x="12" y="66" class="font-sans card-body">• Scheduled file drops</text>
+    <text x="12" y="84" class="font-sans card-body">• 500+ files at once</text>
+  </g>
+
+  <!-- ==================== ZONE 2: EDGE INGESTION ==================== -->
+  <!-- Azure API Management -->
+  <g transform="translate(240, 140)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure API Management (APIM)</text>
+    <text x="14" y="48" class="font-sans card-sub">Gateway &amp; Rate-Limiting Layer</text>
+    <text x="14" y="67" class="font-sans card-body">• rate-limit-by-key policy (HTTP 429)</text>
+    <text x="14" y="85" class="font-sans card-body">• send-service-bus-message policy</text>
+    <text x="14" y="103" class="font-sans card-body">• Immediate HTTP 202 Accepted response</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: Amazon API Gateway</text>
+  </g>
+
+  <!-- Logic Apps Standard (AS2) -->
+  <g transform="translate(240, 315)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure Logic Apps Standard (AS2)</text>
+    <text x="14" y="48" class="font-sans card-sub">Lightweight Protocol Edge Workflow</text>
+    <text x="14" y="67" class="font-sans card-body">• Native AS2 Decode (decrypt &amp; verify)</text>
+    <text x="14" y="85" class="font-sans card-body">• Returns MDN receipt immediately</text>
+    <text x="14" y="103" class="font-sans card-body">• Enqueues raw payload (no heavy parse)</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: AWS Step Functions / B2Bi</text>
+  </g>
+
+  <!-- Azure Blob Storage + Event Grid -->
+  <g transform="translate(240, 480)" filter="url(#shadow)">
+    <rect width="290" height="235" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Blob Storage (SFTP) + Event Grid</text>
+    <text x="14" y="48" class="font-sans card-sub">Claim-Check Pattern for Large Files</text>
+    <text x="14" y="67" class="font-sans card-body">• Managed SFTP endpoint on Blob Storage</text>
+    <text x="14" y="85" class="font-sans card-body">• Captures BlobCreated reactive events</text>
+    <text x="14" y="103" class="font-sans card-body">• Sends lightweight Blob URL pointer only</text>
+    <text x="14" y="121" class="font-sans card-body">  (avoids Service Bus payload quota spikes)</text>
+    
+    <!-- Inner Event Grid Box -->
+    <rect x="14" y="134" width="262" height="58" rx="6" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2"/>
+    <text x="24" y="152" class="font-sans card-title" style="font-size:12.5px;">Azure Event Grid</text>
+    <text x="24" y="168" class="font-sans card-body">• Pub/sub reactive event router</text>
