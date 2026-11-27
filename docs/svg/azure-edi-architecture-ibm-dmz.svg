@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1666 880" width="1666" height="880" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrow-emerald" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
+    </marker>
+
+    <marker id="arrow-ibm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8"/>
+    </marker>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e2e8f0" stroke-width="0.75"/>
+    </pattern>
+
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #0f172a; }
+      .subtitle { font-size: 13px; fill: #475569; }
+      .zone-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; fill: #64748b; }
+      .card-title { font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .card-sub { font-size: 11.5px; font-weight: 600; fill: #0284c7; }
+      .card-body { font-size: 11.5px; fill: #334155; }
+      .aws-badge-text { font-size: 10.5px; font-weight: 700; fill: #9a3412; }
+      .ibm-badge-text { font-size: 10.5px; font-weight: 700; fill: #1e3a8a; }
+      .note-text { font-size: 11px; font-style: italic; fill: #7f1d1d; }
+      .flow-label { font-size: 11px; font-weight: 600; fill: #334155; }
+      .legend-title { font-size: 12px; font-weight: 700; fill: #0f172a; }
+      .legend-text { font-size: 11.5px; fill: #334155; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1666" height="880" fill="#f8fafc"/>
+  <rect width="1666" height="880" fill="url(#grid)"/>
+
+  <!-- Header -->
+  <rect x="24" y="18" width="1618" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
+  <text x="44" y="46" class="font-sans title">End-to-End Azure EDI Architecture (Burst-Resilient + AWS Service Mapping)</text>
+  <text x="44" y="67" class="font-sans subtitle">Decoupled multi-protocol ingestion (REST, AS2, SFTP) • Service Bus Premium shock absorber • Native X12/EDIFACT translation &amp; pub/sub fan-out</text>
+
+  <!-- IBM Legend Pill in Header -->
+  <rect x="1065" y="32" width="270" height="36" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+  <rect x="1075" y="40" width="42" height="20" rx="4" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="1085" y="54" class="font-sans ibm-badge-text">IBM</text>
+  <text x="1126" y="54" class="font-sans legend-text">Blue badges = IBM product option</text>
+
+  <g transform="translate(266,0)">
+  <!-- AWS Legend Pill in Header -->
+  <rect x="1085" y="32" width="270" height="36" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"/>
+  <rect x="1095" y="40" width="42" height="20" rx="4" fill="#ffedd5" stroke="#f97316" stroke-width="1"/>
+  <text x="1103" y="54" class="font-sans aws-badge-text">AWS</text>
+  <text x="1146" y="54" class="font-sans legend-text">Orange badges = Direct AWS Equivalent</text>
+
+  </g>
+
+  <!-- ==================== SWIMLANE ZONES ==================== -->
+  <!-- Zone 1: Trading Partners -->
+  <rect x="24" y="96" width="185" height="640" rx="10" fill="#ffffff" fill-opacity="0.7" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="116" y="118" text-anchor="middle" class="font-sans zone-label">1. Trading Partners</text>
+
+  <!-- DMZ Perimeter Zone (new) -->
+  <rect x="225" y="96" width="250" height="640" rx="10" fill="#fef2f2" fill-opacity="0.7" stroke="#fecaca"/>
+  <text x="350" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#b91c1c;">DMZ Perimeter (IBM)</text>
+
+  <g transform="translate(266,0)">
+  <!-- Zone 2: Edge Ingestion -->
+  <rect x="225" y="96" width="320" height="640" rx="10" fill="#f0f9ff" fill-opacity="0.6" stroke="#bae6fd"/>
+  <text x="385" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#0369a1;">2. Edge Ingestion (Fast Accept)</text>
+
+  <!-- Zone 3: Shock Absorber -->
+  <rect x="561" y="96" width="250" height="640" rx="10" fill="#f5f3ff" fill-opacity="0.65" stroke="#ddd6fe"/>
+  <text x="686" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#6d28d9;">3. Shock Absorber</text>
+
+  <!-- Zone 4: EDI Parsing & Fan-Out -->
+  <rect x="827" y="96" width="340" height="640" rx="10" fill="#ecfdf5" fill-opacity="0.65" stroke="#a7f3d0"/>
+  <text x="997" y="118" text-anchor="middle" class="font-sans zone-label" style="fill:#047857;">4. EDI Engine &amp; Fan-Out</text>
+
+  <!-- Zone 5: Downstream Systems -->
+  <rect x="1183" y="96" width="193" height="640" rx="10" fill="#ffffff" fill-opacity="0.7" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="1279" y="118" text-anchor="middle" class="font-sans zone-label">5. Downstream</text>
+
+  </g>
+
+  <!-- ==================== ZONE 1: PARTNERS ==================== -->
+  <!-- REST Partner -->
+  <g transform="translate(38, 155)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">REST / HTTP Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• JSON / XML / Raw EDI</text>
+    <text x="12" y="66" class="font-sans card-body">• High-frequency bursts</text>
+    <text x="12" y="84" class="font-sans card-body">• Expects HTTP 202</text>
+  </g>
+
+  <!-- AS2 Partner -->
+  <g transform="translate(38, 330)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">AS2 Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• Signed/Encrypted EDI</text>
+    <text x="12" y="66" class="font-sans card-body">• Sync/Async MDN</text>
+    <text x="12" y="84" class="font-sans card-body">• Retail / Logistics EDI</text>
+  </g>
+
+  <!-- SFTP Partner -->
+  <g transform="translate(38, 505)" filter="url(#shadow)">
+    <rect width="156" height="105" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+    <rect width="156" height="28" rx="8" fill="#e2e8f0"/>
+    <text x="78" y="19" text-anchor="middle" class="font-sans card-title">SFTP / Batch Partners</text>
+    <text x="12" y="48" class="font-sans card-body">• Large batch X12/EDIFACT</text>
+    <text x="12" y="66" class="font-sans card-body">• Scheduled file drops</text>
+    <text x="12" y="84" class="font-sans card-body">• 500+ files at once</text>
+  </g>
+
+  <!-- ==================== DMZ: IBM CARDS (new) ==================== -->
+  <g transform="translate(240, 140)" filter="url(#shadow)">
+    <rect width="220" height="135" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+    <rect width="220" height="30" rx="8" fill="#1d4ed8"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">IBM API Connect</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#1d4ed8;">REST API Gateway</text>
+    <text x="14" y="67" class="font-sans card-body">• Auth: API keys / OAuth</text>
+    <text x="14" y="85" class="font-sans card-body">• Rate limiting (HTTP 429)</text>
+    <text x="14" y="103" class="font-sans card-body">• Blocks abusive callers</text>
+    <rect x="14" y="120" width="192" height="19" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+    <text x="22" y="133" class="font-sans ibm-badge-text">IBM alt. to Azure APIM</text>
+  </g>
+  <g transform="translate(240, 345)" filter="url(#shadow)">
+    <rect width="220" height="235" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+    <rect width="220" height="30" rx="8" fill="#1d4ed8"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">IBM Sterling Secure Proxy</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#1d4ed8;">Perimeter Protocol Break</text>
+    <text x="14" y="67" class="font-sans card-body">• Partner connections end here</text>
+    <text x="14" y="85" class="font-sans card-body">• AS2 / SFTP end in the DMZ</text>
+    <text x="14" y="103" class="font-sans card-body">• Internal B2Bi not reachable</text>
+    <text x="14" y="121" class="font-sans card-body">  directly from the internet</text>
+    <text x="14" y="139" class="font-sans card-body">• New session opened inward</text>
+    <text x="14" y="157" class="font-sans card-body">• Cert &amp; key checks up front</text>
+    <text x="14" y="175" class="font-sans card-body">• IP allow-listing for partners</text>
+    <rect x="14" y="192" width="192" height="19" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+    <text x="22" y="205" class="font-sans ibm-badge-text">Pairs with IBM Sterling B2Bi</text>
+  </g>
+  <text x="240" y="640" class="font-sans note-text">Partner traffic terminates in the DMZ.</text>
+  <text x="240" y="656" class="font-sans note-text">Nothing from the internet reaches the</text>
+  <text x="240" y="672" class="font-sans note-text">internal network or B2Bi directly.</text>
+
+  <g transform="translate(266,0)">
+  <!-- ==================== ZONE 2: EDGE INGESTION ==================== -->
+  <!-- Azure API Management -->
+  <g transform="translate(240, 140)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure API Management (APIM)</text>
+    <text x="14" y="48" class="font-sans card-sub">Gateway &amp; Rate-Limiting Layer</text>
+    <text x="14" y="67" class="font-sans card-body">• rate-limit-by-key policy (HTTP 429)</text>
+    <text x="14" y="85" class="font-sans card-body">• send-service-bus-message policy</text>
+    <text x="14" y="103" class="font-sans card-body">• Immediate HTTP 202 Accepted response</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: Amazon API Gateway</text>
+  </g>
+
+  <!-- Logic Apps Standard (AS2) -->
+  <g transform="translate(240, 315)" filter="url(#shadow)">
+    <rect width="290" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure Logic Apps Standard (AS2)</text>
+    <text x="14" y="48" class="font-sans card-sub">Lightweight Protocol Edge Workflow</text>
+    <text x="14" y="67" class="font-sans card-body">• Native AS2 Decode (decrypt &amp; verify)</text>
+    <text x="14" y="85" class="font-sans card-body">• Returns MDN receipt immediately</text>
+    <text x="14" y="103" class="font-sans card-body">• Enqueues raw payload (no heavy parse)</text>
+    <!-- AWS Badge -->
+    <rect x="14" y="110" width="262" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="123" class="font-sans aws-badge-text">AWS Equiv: AWS Step Functions / B2Bi</text>
+  </g>
+
+  <!-- Azure Blob Storage + Event Grid -->
+  <g transform="translate(240, 480)" filter="url(#shadow)">
+    <rect width="290" height="235" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="290" height="30" rx="8" fill="#0284c7"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Blob Storage (SFTP) + Event Grid</text>
+    <text x="14" y="48" class="font-sans card-sub">Claim-Check Pattern for Large Files</text>
+    <text x="14" y="67" class="font-sans card-body">• Managed SFTP endpoint on Blob Storage</text>
+    <text x="14" y="85" class="font-sans card-body">• Captures BlobCreated reactive events</text>
+    <text x="14" y="103" class="font-sans card-body">• Sends lightweight Blob URL pointer only</text>
+    <text x="14" y="121" class="font-sans card-body">  (avoids Service Bus payload quota spikes)</text>
+    
+    <!-- Inner Event Grid Box -->
+    <rect x="14" y="134" width="262" height="58" rx="6" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.2"/>
+    <text x="24" y="152" class="font-sans card-title" style="font-size:12.5px;">Azure Event Grid</text>
+    <text x="24" y="168" class="font-sans card-body">• Pub/sub reactive event router</text>
+  </g>
+    <!-- ==================== ZONE 3: SHOCK ABSORBER ==================== -->
+  <!-- Service Bus Queues -->
+  <g transform="translate(580, 240)" filter="url(#shadow)">
+    <rect width="210" height="150" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <rect width="210" height="30" rx="8" fill="#7c3aed"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Service Bus Queues</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#6d28d9;">Ingestion Buffer</text>
+    <text x="14" y="67" class="font-sans card-body">• Buffers burst traffic</text>
+    <text x="14" y="85" class="font-sans card-body">• Peek-lock reliability</text>
+    <text x="14" y="103" class="font-sans card-body">• Dead-lettering for bad data</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="120" width="182" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="133" class="font-sans aws-badge-text">AWS Equiv: Amazon SQS</text>
+  </g>
+
+  <!-- ==================== ZONE 4: EDI ENGINE & FAN-OUT ==================== -->
+  <!-- Logic Apps (EDI Engine) -->
+  <g transform="translate(845, 140)" filter="url(#shadow)">
+    <rect width="300" height="135" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Logic Apps (EDI Engine)</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">X12 / EDIFACT Translation</text>
+    <text x="14" y="67" class="font-sans card-body">• Integration Account (Schemas/Maps)</text>
+    <text x="14" y="85" class="font-sans card-body">• Validates &amp; Translates EDI to JSON</text>
+    <text x="14" y="103" class="font-sans card-body">• Generates Outbound Acknowledgements</text>
+  </g>
+
+  <!-- Azure Functions -->
+  <g transform="translate(845, 295)" filter="url(#shadow)">
+    <rect width="300" height="115" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Azure Functions</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">Custom Processing &amp; Debatching</text>
+    <text x="14" y="67" class="font-sans card-body">• Splits large batches into single records</text>
+    <text x="14" y="85" class="font-sans card-body">• Data enrichment &amp; Liquid templating</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="100" width="272" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="113" class="font-sans aws-badge-text">AWS Equiv: AWS Lambda</text>
+  </g>
+
+  <!-- Service Bus Topics (Fan-Out) -->
+  <g transform="translate(845, 430)" filter="url(#shadow)">
+    <rect width="300" height="135" rx="8" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#059669"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Service Bus Topics</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#047857;">Pub / Sub Routing</text>
+    <text x="14" y="67" class="font-sans card-body">• Publishes clean, translated JSON</text>
+    <text x="14" y="85" class="font-sans card-body">• SQL Filters route data to specific subs</text>
+    <text x="14" y="103" class="font-sans card-body">• Decouples engine from downstream APIs</text>
+    
+    <!-- AWS Badge -->
+    <rect x="14" y="120" width="272" height="19" rx="4" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+    <text x="22" y="133" class="font-sans aws-badge-text">AWS Equiv: Amazon SNS</text>
+  </g>
+
+  </g>
+
+  <!-- Flow arrows through the DMZ -->
+  <g fill="none" stroke="#1d4ed8" stroke-width="1.8">
+    <path d="M 196 207 L 238 207" marker-end="url(#arrow-ibm)"/>
+    <path d="M 196 382 L 238 382" marker-end="url(#arrow-ibm)"/>
+    <path d="M 196 557 L 238 557" marker-end="url(#arrow-ibm)"/>
+    <path d="M 462 382 L 504 382" stroke-dasharray="5 4" marker-end="url(#arrow-ibm)"/>
+    <path d="M 462 557 L 504 557" stroke-dasharray="5 4" marker-end="url(#arrow-ibm)"/>
+  </g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjNWZlYWQ4Zi1lN2MxLTQ0Y2MtOWJhZC1iMjRkNzM0ODE4NmIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJ8Ue1Vn00VutScjjq5cop4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo2ZWUwYmM5MC05YzYzLTQ3MzItOGNhOS02NzAwYjNmMjQ5ZmZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo+ozkgTJ33Y1+ix8Zg07XewAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggsNnLEpzk2IZK2SefUFvfWBa0JKJ+cXB+i/zrGuiSu5akZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCm/mvX2S4r8iY7E+ChQx3gAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYII00JnAnXB2oGZVTgWZMvBIHyoEGMwFi4qj0Lpw+JSI3ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUX/Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM1ZmVhZDhmLWU3YzEtNDRjYy05YmFkLWIyNGQ3MzQ4MTg2Yi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmZjZWFlMTFhLTllZGQtNGMwNS05ZmFlLTYzMTgzMzQ0NzBmMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCw2csSnOTYhkrZJ59QW99YFrQkon5xcH6L/Osa6JK7lqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLVlCRhaw7xpxm/hj6hOSw4ZTcXIUSkXIUx1uGoLWVQWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg8ShQV5bnXVIBw6sK49LHWZfwkDIMesmlW9U1SfKumu10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMyW/NPpVB8cLXvIjHWnd6iIn+sDlFz21LRjfGbFm+/D/PyXb/t/ckBtjC5RyWzgsnZzVVSdk7uLDCELgjI+Fns=</c2pa:manifest></metadata></svg>
