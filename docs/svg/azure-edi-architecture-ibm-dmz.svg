@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1666 880" width="1666" height="880" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1666 1216" width="1666" height="1216" xmlns:c2pa="http://c2pa.org/manifest">
   <defs>
     <!-- Drop Shadow -->
     <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
@@ -26,6 +26,10 @@
       <path d="M 0 1 L 10 5 L 0 9 z" fill="#1d4ed8"/>
     </marker>
 
+    <marker id="arrow-fuchsia" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#a21caf"/>
+    </marker>
+
     <!-- Background Grid Pattern -->
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e2e8f0" stroke-width="0.75"/>
@@ -49,8 +53,8 @@
   </defs>
 
   <!-- Canvas Background -->
-  <rect width="1666" height="880" fill="#f8fafc"/>
-  <rect width="1666" height="880" fill="url(#grid)"/>
+  <rect width="1666" height="1216" fill="#f8fafc"/>
+  <rect width="1666" height="1216" fill="url(#grid)"/>
 
   <!-- Header -->
   <rect x="24" y="18" width="1618" height="64" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" filter="url(#shadow)"/>
@@ -275,4 +279,144 @@
     <path d="M 462 382 L 504 382" stroke-dasharray="5 4" marker-end="url(#arrow-ibm)"/>
     <path d="M 462 557 L 504 557" stroke-dasharray="5 4" marker-end="url(#arrow-ibm)"/>
   </g>
-<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjNWZlYWQ4Zi1lN2MxLTQ0Y2MtOWJhZC1iMjRkNzM0ODE4NmIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJ8Ue1Vn00VutScjjq5cop4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo2ZWUwYmM5MC05YzYzLTQ3MzItOGNhOS02NzAwYjNmMjQ5ZmZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo+ozkgTJ33Y1+ix8Zg07XewAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggsNnLEpzk2IZK2SefUFvfWBa0JKJ+cXB+i/zrGuiSu5akZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCm/mvX2S4r8iY7E+ChQx3gAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYII00JnAnXB2oGZVTgWZMvBIHyoEGMwFi4qj0Lpw+JSI3ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUX/Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM1ZmVhZDhmLWU3YzEtNDRjYy05YmFkLWIyNGQ3MzQ4MTg2Yi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmZjZWFlMTFhLTllZGQtNGMwNS05ZmFlLTYzMTgzMzQ0NzBmMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCw2csSnOTYhkrZJ59QW99YFrQkon5xcH6L/Osa6JK7lqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLVlCRhaw7xpxm/hj6hOSw4ZTcXIUSkXIUx1uGoLWVQWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg8ShQV5bnXVIBw6sK49LHWZfwkDIMesmlW9U1SfKumu10Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMyW/NPpVB8cLXvIjHWnd6iIn+sDlFz21LRjfGbFm+/D/PyXb/t/ckBtjC5RyWzgsnZzVVSdk7uLDCELgjI+Fns=</c2pa:manifest></metadata></svg>
+
+  <!-- ==================== ZONE 6: MODERNIZATION LAYER (NEW) ==================== -->
+  <rect x="24" y="756" width="1618" height="436" rx="10" fill="#fdf4ff" fill-opacity="0.7" stroke="#f0abfc"/>
+  <text x="44" y="780" class="font-sans zone-label" style="fill:#a21caf;">6. Modernization Layer — Wraps IBM Sterling B2B Integrator</text>
+  <text x="44" y="799" class="font-sans subtitle">React &amp; Next.js front-ends • Node.js API gateway / BFF • Python data-processing scripts — modern UIs, APIs and scripts around Sterling’s heavy backend engine</text>
+
+  <!-- Legend pill -->
+  <rect x="1356" y="764" width="270" height="30" rx="6" fill="#fdf4ff" stroke="#e879f9" stroke-width="1.2"/>
+  <rect x="1364" y="769" width="42" height="20" rx="4" fill="#fae8ff" stroke="#a21caf" stroke-width="1"/>
+  <text x="1371" y="783" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#86198f;">NEW</text>
+  <text x="1414" y="783" class="font-sans legend-text">Modern web / API / data layer</text>
+
+  <g transform="translate(40, 816)" filter="url(#shadow)">
+    <rect width="180" height="160" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="180" height="30" rx="8" fill="#e2e8f0"/>
+    <text x="14" y="20" class="font-sans card-title">Internal Teams</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#475569;">Browser users</text>
+    <text x="14" y="67" class="font-sans card-body">• Ops &amp; support staff</text>
+    <text x="14" y="85" class="font-sans card-body">• EDI analysts</text>
+    <text x="14" y="103" class="font-sans card-body">• Partner onboarding team</text>
+    <text x="14" y="121" class="font-sans card-body">• Replay, search, alerts</text>
+    <rect x="14" y="130" width="152" height="19" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#334155;">SSO: Entra ID / OIDC</text>
+  </g>
+  <g transform="translate(40, 1000)" filter="url(#shadow)">
+    <rect width="180" height="160" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <rect width="180" height="30" rx="8" fill="#e2e8f0"/>
+    <text x="14" y="20" class="font-sans card-title">Trading Partners</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#475569;">Browser users</text>
+    <text x="14" y="67" class="font-sans card-body">• Suppliers &amp; customers</text>
+    <text x="14" y="85" class="font-sans card-body">• Self-service portal</text>
+    <text x="14" y="103" class="font-sans card-body">• Track documents &amp; acks</text>
+    <text x="14" y="121" class="font-sans card-body">• Manage certs &amp; contacts</text>
+    <rect x="14" y="130" width="152" height="19" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#334155;">Partner login + MFA</text>
+  </g>
+  <g transform="translate(260, 816)" filter="url(#shadow)">
+    <rect width="300" height="160" rx="8" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#0e7490"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">React — Internal Ops Console</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#0e7490;">Modern UI for Sterling operations</text>
+    <text x="14" y="67" class="font-sans card-body">• Transaction &amp; document tracking dashboards</text>
+    <text x="14" y="85" class="font-sans card-body">• Partner profile &amp; certificate management</text>
+    <text x="14" y="103" class="font-sans card-body">• One-click replay of failed EDI documents</text>
+    <text x="14" y="121" class="font-sans card-body">• Live status feeds via WebSocket / SSE</text>
+    <rect x="14" y="130" width="272" height="19" rx="4" fill="#ecfeff" stroke="#67e8f9" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#155e75;">React • TypeScript • Component library</text>
+  </g>
+  <g transform="translate(260, 1000)" filter="url(#shadow)">
+    <rect width="300" height="160" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <rect width="300" height="30" rx="8" fill="#0f172a"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Next.js — Partner Portal</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#334155;">SSR portal for trading partners</text>
+    <text x="14" y="67" class="font-sans card-body">• Server-side rendered, fast first load</text>
+    <text x="14" y="85" class="font-sans card-body">• Partner login, MFA &amp; role-based views</text>
+    <text x="14" y="103" class="font-sans card-body">• Self-service: status, acks, onboarding</text>
+    <text x="14" y="121" class="font-sans card-body">• API routes proxy to the Node.js layer</text>
+    <rect x="14" y="130" width="272" height="19" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#0f172a;">Next.js • TypeScript • Server Components</text>
+  </g>
+  <g transform="translate(600, 816)" filter="url(#shadow)">
+    <rect width="330" height="160" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+    <rect width="330" height="30" rx="8" fill="#15803d"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Node.js — API Gateway / BFF</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#15803d;">Modern REST / GraphQL wrapper over Sterling</text>
+    <text x="14" y="67" class="font-sans card-body">• Wraps Sterling REST APIs &amp; mailboxes</text>
+    <text x="14" y="85" class="font-sans card-body">• Aggregates calls into UI-friendly JSON</text>
+    <text x="14" y="103" class="font-sans card-body">• OAuth2 / OIDC validation, RBAC, retries</text>
+    <text x="14" y="121" class="font-sans card-body">• Partner APIs published via IBM API Connect</text>
+    <rect x="14" y="130" width="302" height="19" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#166534;">Node.js • Express / Fastify • TypeScript</text>
+  </g>
+  <g transform="translate(600, 1000)" filter="url(#shadow)">
+    <rect width="330" height="160" rx="8" fill="#ffffff" stroke="#a16207" stroke-width="2"/>
+    <rect width="330" height="30" rx="8" fill="#a16207"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">Python — Data-Processing Scripts</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#a16207;">Custom pre / post-processing around Sterling</text>
+    <text x="14" y="67" class="font-sans card-body">• Pre-validate &amp; clean files before B2Bi</text>
+    <text x="14" y="85" class="font-sans card-body">• Enrich / reconcile with ERP data (pandas)</text>
+    <text x="14" y="103" class="font-sans card-body">• Convert CSV / Excel / JSON for X12 maps</text>
+    <text x="14" y="121" class="font-sans card-body">• Monitoring, anomaly detection &amp; alerts</text>
+    <rect x="14" y="130" width="302" height="19" rx="4" fill="#fefce8" stroke="#fde047" stroke-width="1"/>
+    <text x="22" y="143" class="font-sans" style="font-size:10.5px;font-weight:700;fill:#854d0e;">Python • pandas • FastAPI • Azure Functions</text>
+  </g>
+  <g transform="translate(1000, 816)" filter="url(#shadow)">
+    <rect width="626" height="344" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+    <rect width="626" height="30" rx="8" fill="#1d4ed8"/>
+    <text x="14" y="20" class="font-sans card-title" style="fill:#ffffff;">IBM Sterling B2B Integrator — Backend Engine</text>
+    <text x="14" y="48" class="font-sans card-sub" style="fill:#1d4ed8;">Heavy-duty EDI translation, managed file transfer &amp; partner protocols</text>
+    <rect x="14" y="62" width="291" height="58" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="24" y="80" class="font-sans card-title" style="font-size:12.5px;">EDI Translation</text>
+    <text x="24" y="98" class="font-sans card-body">X12 / EDIFACT / XML maps &amp; validation</text>
+    <text x="24" y="113" class="font-sans card-body">Generates 997 / CONTRL acknowledgements</text>
+    <rect x="321" y="62" width="291" height="58" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="331" y="80" class="font-sans card-title" style="font-size:12.5px;">Managed File Transfer</text>
+    <text x="331" y="98" class="font-sans card-body">Sterling File Gateway routing &amp; mailboxes</text>
+    <text x="331" y="113" class="font-sans card-body">Guaranteed delivery, retries, audit</text>
+    <rect x="14" y="128" width="291" height="58" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="24" y="146" class="font-sans card-title" style="font-size:12.5px;">Partner Protocols</text>
+    <text x="24" y="164" class="font-sans card-body">AS2, SFTP, FTPS, HTTP(S) endpoints</text>
+    <text x="24" y="179" class="font-sans card-body">Fronted by Secure Proxy in the DMZ</text>
+    <rect x="321" y="128" width="291" height="58" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="331" y="146" class="font-sans card-title" style="font-size:12.5px;">Business Process Engine</text>
+    <text x="331" y="164" class="font-sans card-body">BPML workflows, scheduling, error handling</text>
+    <text x="331" y="179" class="font-sans card-body">Long-running, high-volume processing</text>
+    <rect x="14" y="194" width="291" height="58" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+    <text x="24" y="212" class="font-sans card-title" style="font-size:12.5px;">Partner Profiles &amp; Security</text>
+    <text x="24" y="230" class="font-sans card-body">Trading-partner config, certs, PGP keys</text>
+    <text x="24" y="245" class="font-sans card-body">Full transaction audit trail</text>
+    <rect x="321" y="194" width="291" height="58" rx="6" fill="#fdf4ff" stroke="#d946ef" stroke-width="1.2"/>
+    <text x="331" y="212" class="font-sans card-title" style="font-size:12.5px;">Integration Surfaces (wrapped)</text>
+    <text x="331" y="230" class="font-sans card-body">REST APIs • Mailbox API • DB / JMS events</text>
+    <text x="331" y="245" class="font-sans card-body">Entry points used by Node.js &amp; Python</text>
+    <rect x="14" y="262" width="598" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="24" y="284" class="font-sans card-body" style="font-style:italic;fill:#475569;">Legacy Sterling dashboard / admin UI: older &amp; rigid — now wrapped by React &amp; Next.js front-ends</text>
+    <rect x="14" y="310" width="598" height="19" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+    <text x="22" y="323" class="font-sans ibm-badge-text">Core engine: EDI translation • MFT • AS2 / SFTP partner protocols</text>
+  </g>
+
+  <!-- Modernization-layer flows -->
+  <g fill="none" stroke="#a21caf" stroke-width="1.8">
+    <path d="M 222 896 L 258 896" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 222 1080 L 258 1080" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 562 896 L 598 896" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 562 1080 L 580 1080 L 580 936 L 598 936" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 765 978 L 765 998" stroke-dasharray="5 4" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 932 896 L 998 896" marker-start="url(#arrow-fuchsia)" marker-end="url(#arrow-fuchsia)"/>
+    <path d="M 932 1080 L 998 1080" marker-start="url(#arrow-fuchsia)" marker-end="url(#arrow-fuchsia)"/>
+  </g>
+  <text x="965" y="888" text-anchor="middle" class="font-sans flow-label">REST API</text>
+  <text x="965" y="1072" text-anchor="middle" class="font-sans flow-label">File / API</text>
+  <text x="775" y="992" class="font-sans flow-label">internal calls</text>
+
+  <!-- DMZ (Secure Proxy) -> Sterling B2Bi -->
+  <path d="M 450 582 L 450 746 L 1180 746 L 1180 814" fill="none" stroke="#1d4ed8" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow-ibm)"/>
+  <rect x="640" y="738" width="330" height="16" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="805" y="750" text-anchor="middle" class="font-sans flow-label" style="fill:#1e3a8a;">Secure Proxy opens new session inward → Sterling B2Bi</text>
+
+  <text x="44" y="1181" class="font-sans card-body" style="font-style:italic;">Sterling stays the system of record for EDI translation, MFT and AS2 / SFTP; Node.js, Python, React and Next.js modernize how internal teams and trading partners interact with it.</text>
+
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiODgwYjdiYy1lMWE3LTQxZjUtOWNlOS05ZDExZDJkNGRhNjMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKp8apF0qjHMDRKl8TGPf+AAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozMGU1NTZhZS1jNDI3LTRjMTUtYWRiMy05OGUxN2IyMTY4ZDhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoR+8eKTRUE96ZFPga8b6jjQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggQAQX2OOXDvCxsiO0lSc5lgX4LzJ7iuuqfEGGPvvavx+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAHoDapt7E0jl9z+wiD6mAIAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICBPJNE3bFqOeIWoODC1H9lGujSdy1TbA4/v+xIYOkcVZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GXiQZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmI4ODBiN2JjLWUxYTctNDFmNS05Y2U5LTlkMTFkMmQ0ZGE2My9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmU3ZmExZGM2LTkwZmMtNGRkNy1iNzZmLTYzNDhhNzdiN2U5Y3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBABBfY45cO8LGyI7SVJzmWBfgvMnuK66p8QYY++9q/H6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggRh492d+pZwD4O9mObd9U6CfThs8wpk06baxYKj9nPtyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggg3UYJTIoeVk1SlEAvh5mjpZEdZfqBE4JJ/BV6+Au16Z0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIEVglFNDbl7xzw/7VoG/L0wmwDvulCOa+hjT57Z39VJoPaE7a+PaR0mBJn3DWbD2tGdM2ICRHffEE73lca7XME=</c2pa:manifest></metadata></svg>
